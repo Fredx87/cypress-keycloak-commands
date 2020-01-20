@@ -1,0 +1,13 @@
+{
+	"extends": ["eslint:recommended", "prettier", "prettier/@typescript-eslint"],
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint/eslint-plugin"],
+	"parserOptions": {
+		"project": "./tsconfig.json",
+		"ecmaVersion": 6,
+		"sourceType": "module"
+	},
+	"rules": {
+		"no-undef": "off"
+	}
+}
