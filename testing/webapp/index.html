@@ -214,11 +214,14 @@
 				event("Access token expired.");
 			};
 
+			const checkLoginIframe = window.Cypress ? false : true;
+
 			// Flow can be changed to 'implicit' or 'hybrid', but then client must enable implicit flow in admin console too
 			var initOptions = {
 				responseMode: "fragment",
 				flow: "standard",
-				onLoad: "login-required"
+				onLoad: "login-required",
+				checkLoginIframe
 			};
 
 			keycloak

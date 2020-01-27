@@ -1,12 +1,12 @@
 import { createUUID, decodeToken } from "./utils";
 
 Cypress.Commands.add("kcFakeLogin", (user: string) => {
-	Cypress.log({ name: "Mock Login" });
+	Cypress.log({ name: "Fake Login" });
 
 	return cy.fixture(`users/${user}`).then((userData: UserData) => {
 		if (!userData.fakeLogin) {
 			throw new Error(
-				"To use kcFakeLogin command you should define mockLogin data in fixture"
+				"To use kcFakeLogin command you should define fakeLogin data in fixture"
 			);
 		}
 
@@ -59,7 +59,7 @@ Cypress.Commands.add("kcFakeLogin", (user: string) => {
 
 		const url = `${
 			Cypress.config().baseUrl
-		}/?#state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
+		}/#state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
 
 		cy.visit(url);
 	});
