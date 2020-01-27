@@ -3,7 +3,7 @@
 interface UserData {
 	username: string;
 	password: string;
-	mockLogin?: {
+	fakeLogin?: {
 		access_token: string;
 		refresh_token: string;
 		id_token: string;
