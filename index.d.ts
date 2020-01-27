@@ -11,10 +11,16 @@ interface UserData {
 	};
 }
 
+interface KcTokens {
+	access_token: string;
+	refresh_token: string;
+	id_token: string;
+}
+
 // eslint-disable-next-line no-unused-vars
 declare namespace Cypress {
 	interface Chainable {
-		kcLogin(user: string): Chainable<string>;
+		kcLogin(user: string): Chainable<KcTokens>;
 		kcLogout(): Chainable<void>;
 		kcFakeLogin(user: string): Chainable<void>;
 	}
