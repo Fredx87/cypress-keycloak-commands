@@ -9,7 +9,7 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"test": "npm run cy:run",
+		"test": "wait-on http://localhost:8081/auth && npm run cy:run",
 		"lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
 		"format": "prettier --write \"**/*.{js,css,md}\"",
 		"cy:open": "cypress open",
@@ -48,6 +48,7 @@
 		"prettier": "^1.19.1",
 		"ts-loader": "^6.2.1",
 		"typescript": "^3.7.5",
+		"wait-on": "^4.0.0",
 		"webpack": "^4.41.5"
 	},
 	"husky": {
