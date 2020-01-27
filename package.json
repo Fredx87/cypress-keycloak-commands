@@ -4,11 +4,12 @@
 	"description": "Cypress commands for login with Keycloak",
 	"main": "dist/index.js",
 	"files": [
-		"dist",
-		"index.d.ts"
+		"dist"
 	],
+	"types": "index.d.ts",
 	"scripts": {
-		"build": "tsc",
+		"clean": "rimraf dist/*",
+		"build": "npm run clean && tsc",
 		"test": "wait-on http://localhost:8081/auth && npm run cy:run",
 		"lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
 		"format": "prettier --write \"**/*.{js,css,md}\"",
@@ -46,6 +47,7 @@
 		"husky": "^4.0.10",
 		"lint-staged": "^10.0.0",
 		"prettier": "^1.19.1",
+		"rimraf": "^3.0.0",
 		"ts-loader": "^6.2.1",
 		"typescript": "^3.7.5",
 		"wait-on": "^4.0.0",
