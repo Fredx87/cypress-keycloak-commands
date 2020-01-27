@@ -4,5 +4,6 @@
 		"auth_base_url": "http://localhost:8081/auth",
 		"auth_realm": "example",
 		"auth_client_id": "js-console"
-	}
+	},
+	"video": false
 }

@@ -9,11 +9,11 @@
 	],
 	"scripts": {
 		"build": "tsc",
-		"pretest": "npm run lint",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"posttest": "npm run format",
+		"test": "npm run cy:run",
 		"lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
-		"format": "prettier --write \"**/*.{js,css,md}\""
+		"format": "prettier --write \"**/*.{js,css,md}\"",
+		"cy:open": "cypress open",
+		"cy:run": "cypress run"
 	},
 	"repository": {
 		"type": "git",
