@@ -12,7 +12,7 @@
 		"pretest": "npm run lint",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"posttest": "npm run format",
-		"lint": "eslint . --cache --fix --ext .ts,.tsx",
+		"lint": "eslint . --cache --fix --ext .ts,.tsx,.js",
 		"format": "prettier --write \"**/*.{js,css,md}\""
 	},
 	"repository": {
@@ -35,15 +35,20 @@
 	"homepage": "https://github.com/Fredx87/cypress-keycloak-commands#readme",
 	"dependencies": {},
 	"devDependencies": {
+		"@cypress/webpack-preprocessor": "^4.1.1",
+		"@testing-library/cypress": "^5.0.2",
+		"@types/testing-library__cypress": "^5.0.1",
 		"@typescript-eslint/eslint-plugin": "^2.16.0",
 		"@typescript-eslint/parser": "^2.16.0",
-		"cypress": "^3.8.2",
+		"cypress": "^3.8.3",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.9.0",
 		"husky": "^4.0.10",
 		"lint-staged": "^10.0.0",
 		"prettier": "^1.19.1",
-		"typescript": "^3.7.5"
+		"ts-loader": "^6.2.1",
+		"typescript": "^3.7.5",
+		"webpack": "^4.41.5"
 	},
 	"husky": {
 		"hooks": {
@@ -51,10 +56,10 @@
 		}
 	},
 	"lint-staged": {
-		"*.{js,css,md,json,yml}": [
+		"*.{css,md,json,yml}": [
 			"prettier --write"
 		],
-		"*.{ts,tsx}": [
+		"*.{ts,tsx,js}": [
 			"eslint --fix"
 		]
 	}
