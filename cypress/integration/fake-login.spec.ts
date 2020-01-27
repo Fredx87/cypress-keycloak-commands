@@ -11,6 +11,8 @@ describe("Keycloak Fake Login", () => {
 	});
 
 	it("should get user data equal to fixture data", () => {
+		cy.get("#output").should("contain.text", "Init Success (Authenticated)");
+
 		cy.findByText("Get Profile").click();
 
 		cy.fixture("users/user.json").then((userData: UserData) => {
