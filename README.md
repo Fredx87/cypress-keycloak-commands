@@ -69,7 +69,7 @@ describe("Keycloak Login", () => {
 });
 ```
 
-You should always perform logout _before_ logging a user, following the best practices of [cleaning the state in the beforeEach hook](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
+You should always perform logout _before_ logging in a user, following the best practice of [cleaning the state in the beforeEach hook](https://docs.cypress.io/guides/references/best-practices.html#Using-after-or-afterEach-hooks).
 
 #### Get user tokens for calling APIs from E2E tests
 
@@ -104,7 +104,7 @@ cy.get<KcTokens>("@tokens");
 
 ### Fake Login for Integration testing
 
-If you are doing an integration test that doesn't call a real backend API, maybe you don't neeed to authenticate a real user to a running Keycloak instance, but if your app uses the Keycloak Javascript Adapter to check if a user is logged in, you will need to have a mocked user.
+If you are doing an integration test that doesn't call a real backend API, maybe you don't need to authenticate a real user to a running Keycloak instance, but if your app uses the Keycloak Javascript Adapter to check if a user is logged in, you will need to have a mocked user.
 
 To create mocked user data, you need three tokens (access token, refresh token, id token) of a real user returned by your Keycloak instance. You can get them for example from the Dev Tools of your browser, searching for calls to the `token` endpoint of Keycloak. If your app calls the `/account` endpoint to retrieve user information you will also need to have the response returned for the API. Then you can create the fixture with the fake user data:
 
