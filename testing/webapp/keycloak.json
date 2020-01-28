@@ -1,0 +1,8 @@
+{
+	"realm": "example",
+	"auth-server-url": "http://localhost:8081/auth",
+	"ssl-required": "external",
+	"resource": "js-console",
+	"public-client": true,
+	"enable-cors": true
+}
