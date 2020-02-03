@@ -1,6 +1,6 @@
 import { createUUID, decodeToken } from "./utils";
 
-Cypress.Commands.add("kcFakeLogin", (user: string) => {
+Cypress.Commands.add("kcFakeLogin", (user: string, visitUrl = "") => {
   Cypress.log({ name: "Fake Login" });
 
   return cy.fixture(`users/${user}`).then((userData: UserData) => {
@@ -59,7 +59,7 @@ Cypress.Commands.add("kcFakeLogin", (user: string) => {
 
     const url = `${
       Cypress.config().baseUrl
-    }/#state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
+    }/${visitUrl}#state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
 
     cy.visit(url);
   });
