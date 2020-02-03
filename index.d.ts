@@ -22,6 +22,6 @@ declare namespace Cypress {
   interface Chainable {
     kcLogin(user: string): Chainable<KcTokens>;
     kcLogout(): Chainable<void>;
-    kcFakeLogin(user: string): Chainable<void>;
+    kcFakeLogin(user: string, visitUrl?: string): Chainable<void>;
   }
 }

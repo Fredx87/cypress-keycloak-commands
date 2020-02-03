@@ -126,12 +126,14 @@ To create mocked user data, you need three tokens (access token, refresh token, 
 }
 ```
 
-With the fixture in place, you can use the `kcFakeLogin` command to perform a fake login without hitting a real Keycloak instance:
+With the fixture in place, you can use the `kcFakeLogin` command to perform a fake login without hitting a real Keycloak instance.
+
+The Fake Login is performed loading a page and passing some keycloak initialization parameters in the URL. If you need to visit a page different from the homepage you must pass its url to the `kcFakeLogin` command as second parameter (instead of using `cy.visit`):
 
 ```typescript
 describe("Keycloak Fake Login", () => {
   beforeEach(() => {
-    cy.kcFakeLogin("user");
+    cy.kcFakeLogin("user", "pageToVisit");
   });
 });
 ```
