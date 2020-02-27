@@ -57,9 +57,12 @@ Cypress.Commands.add("kcFakeLogin", (user: string, visitUrl = "") => {
 
     cy.route(`${authBaseUrl}/realms/${realm}/account`, account);
 
+    // in case visitUrl is an url with a hash, a second hash should not be added to the url
+    const joiningCharacter = visitUrl.indexOf("#") === -1 ? "#" : "&";
+
     const url = `${
       Cypress.config().baseUrl
-    }/${visitUrl}#state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
+    }/${visitUrl}${joiningCharacter}state=${state}&session_state=${createUUID()}&code=${createUUID()}`;
 
     cy.visit(url);
   });
