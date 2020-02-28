@@ -6,6 +6,20 @@
   "commit": false,
   "contributors": [
     {
+      "login": "Fredx87",
+      "name": "Gianluca Frediani",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13420283?v=4",
+      "profile": "https://github.com/Fredx87",
+      "contributions": [
+        "infra",
+        "tool",
+        "test",
+        "doc",
+        "ideas",
+        "code"
+      ]
+    },
+    {
       "login": "groie",
       "name": "Ilkka Harmanen",
       "avatar_url": "https://avatars3.githubusercontent.com/u/5516998?v=4",
@@ -20,5 +34,6 @@
   "projectOwner": "Fredx87",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "none"
 }

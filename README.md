@@ -1,6 +1,6 @@
 # cypress-keycloak-commands
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Cypress commands for login with [Keycloak](https://www.keycloak.org/).
@@ -176,6 +176,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
+    <td align="center"><a href="https://github.com/Fredx87"><img src="https://avatars2.githubusercontent.com/u/13420283?v=4" width="100px;" alt=""/><br /><sub><b>Gianluca Frediani</b></sub></a><br /><a href="#infra-Fredx87" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#tool-Fredx87" title="Tools">🔧</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Tests">⚠️</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Documentation">📖</a> <a href="#ideas-Fredx87" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=Fredx87" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/groie"><img src="https://avatars3.githubusercontent.com/u/5516998?v=4" width="100px;" alt=""/><br /><sub><b>Ilkka Harmanen</b></sub></a><br /><a href="https://github.com/Fredx87/cypress-keycloak-commands/commits?author=groie" title="Code">💻</a></td>
   </tr>
 </table>
