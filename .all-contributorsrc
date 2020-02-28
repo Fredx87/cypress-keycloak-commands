@@ -1,0 +1,39 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Fredx87",
+      "name": "Gianluca Frediani",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13420283?v=4",
+      "profile": "https://github.com/Fredx87",
+      "contributions": [
+        "infra",
+        "tool",
+        "test",
+        "doc",
+        "ideas",
+        "code"
+      ]
+    },
+    {
+      "login": "groie",
+      "name": "Ilkka Harmanen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5516998?v=4",
+      "profile": "https://github.com/groie",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "cypress-keycloak-commands",
+  "projectOwner": "Fredx87",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "commitConvention": "none"
+}
