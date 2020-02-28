@@ -18,6 +18,15 @@
         "ideas",
         "code"
       ]
+    },
+    {
+      "login": "groie",
+      "name": "Ilkka Harmanen",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5516998?v=4",
+      "profile": "https://github.com/groie",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -25,5 +34,6 @@
   "projectOwner": "Fredx87",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "none"
 }
