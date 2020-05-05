@@ -47,7 +47,7 @@ Setup the Keycloak configuration in `cypress.json` configuration file:
 }
 ```
 
-You can override this settings for some tests using [Enviroment variabiles](https://docs.cypress.io/guides/guides/environment-variables.html).
+You can override this settings for some tests using [Enviroment variables](https://docs.cypress.io/guides/guides/environment-variables.html).
 
 ### Login commands for E2E Tests
 
