@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   keycloak:
-    image: jboss/keycloak:${KEYCLOAK_VERSION:-8.0.1}
+    image: jboss/keycloak:${KEYCLOAK_VERSION:-10.0.2}
     environment:
       - KEYCLOAK_IMPORT=/tmp/example-realm.json
     volumes:
