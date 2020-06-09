@@ -1,6 +1,9 @@
 # cypress-keycloak-commands
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Cypress commands for login with [Keycloak](https://www.keycloak.org/).
@@ -9,7 +12,7 @@ Cypress commands for login with [Keycloak](https://www.keycloak.org/).
 - Use Fixtures to store users data
 - Returns you the tokens of the logged user for calling backend APIs from your test code
 - Fake login command for integration testing
-- Tested with Keycloak 4.8, 5, 6, 7 and 8
+- Tested with Keycloak 4.8, 5, 6, 7, 8, 9 and 10
 
 ## Usage
 
@@ -42,7 +45,8 @@ Setup the Keycloak configuration in `cypress.json` configuration file:
   "env": {
     "auth_base_url": "https://auth.server/auth",
     "auth_realm": "my_realm",
-    "auth_client_id": "my_client_id"
+    "auth_client_id": "my_client_id",
+    "auth_client_secret": "my_client_secret"
   }
 }
 ```
@@ -183,6 +187,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

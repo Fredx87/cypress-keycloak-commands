@@ -23,6 +23,25 @@ export function getAuthCodeFromLocation(location: string): string | undefined {
   }
 }
 
+export function createRequestBodyForToken(client_id: string, client_secret: string | undefined, baseUrl: string | null, code: string | undefined): object {
+  if (client_secret) {
+    return {
+      client_id,
+      client_secret,
+      redirect_uri: baseUrl,
+      code,
+      grant_type: "authorization_code"
+    }
+  }
+
+  return {
+    client_id,
+    redirect_uri: baseUrl,
+    code,
+    grant_type: "authorization_code"
+  }
+}
+
 export function decodeToken(str: string): { nonce: string } {
   str = str.split(".")[1];
 
