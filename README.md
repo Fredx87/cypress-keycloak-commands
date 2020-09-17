@@ -143,7 +143,7 @@ describe("Keycloak Fake Login", () => {
 
 #### Session Status iframe
 
-At the moment within Cypress is not possible to mock iframe loading and APIs called from an iframe. For this reason, when you use `kcFakeLogin` you have to disable the Session Status iframe, otherwise the Javascript adapter will redirect you to the real Keyacloak instance. You can disable it only when the app is running inside Cypress:
+At the moment within Cypress is not possible to mock iframe loading and APIs called from an iframe. For this reason, when you use `kcFakeLogin` you have to disable the Session Status iframe, otherwise the Javascript adapter will redirect you to the real Keycloak instance. You can disable it only when the app is running inside Cypress:
 
 ```typescript
 const checkLoginIframe = window.Cypress ? false : true;
