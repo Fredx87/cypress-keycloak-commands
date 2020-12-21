@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
 interface UserData {
-  username: string;
-  password: string;
+  username?: string;
+  password?: string;
   fakeLogin?: {
     access_token: string;
     refresh_token: string;
