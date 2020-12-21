@@ -1,9 +1,16 @@
 import { getAuthCodeFromLocation } from "./utils";
 
-Cypress.Commands.add("kcLogin", (user: string) => {
+Cypress.Commands.add("kcLogin", (user: string | UserData) => {
   Cypress.log({ name: "Login" });
 
-  cy.fixture(`users/${user}`).then((userData: UserData) => {
+  let userDataChainable: Cypress.Chainable<UserData>;
+  if (typeof user === 'string') {
+    userDataChainable = cy.fixture(`users/${user}`);
+  } else {
+    userDataChainable = cy.wrap(user, {log: false});
+  }
+
+  userDataChainable.then((userData: UserData) => {
     const authBaseUrl = Cypress.env("auth_base_url");
     const realm = Cypress.env("auth_realm");
     const client_id = Cypress.env("auth_client_id");
