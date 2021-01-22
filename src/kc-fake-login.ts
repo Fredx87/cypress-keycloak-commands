@@ -1,9 +1,16 @@
 import { createUUID, decodeToken } from "./utils";
 
-Cypress.Commands.add("kcFakeLogin", (user: string, visitUrl = "") => {
+Cypress.Commands.add("kcFakeLogin", (user: string | UserData, visitUrl = "") => {
   Cypress.log({ name: "Fake Login" });
 
-  return cy.fixture(`users/${user}`).then((userData: UserData) => {
+  let userDataChainable: Cypress.Chainable<UserData>;
+  if (typeof user === 'string') {
+    userDataChainable = cy.fixture(`users/${user}`);
+  } else {
+    userDataChainable = cy.wrap(user, {log: false});
+  }
+
+  return userDataChainable.then((userData: UserData) => {
     if (!userData.fakeLogin) {
       throw new Error(
         "To use kcFakeLogin command you should define fakeLogin data in fixture"

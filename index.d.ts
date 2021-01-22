@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
 interface UserData {
-  username: string;
-  password: string;
+  username?: string;
+  password?: string;
   fakeLogin?: {
     access_token: string;
     refresh_token: string;
@@ -20,8 +20,8 @@ interface KcTokens {
 // eslint-disable-next-line no-unused-vars
 declare namespace Cypress {
   interface Chainable {
-    kcLogin(user: string): Chainable<KcTokens>;
+    kcLogin(user: string | UserData): Chainable<KcTokens>;
     kcLogout(): Chainable<void>;
-    kcFakeLogin(user: string, visitUrl?: string): Chainable<void>;
+    kcFakeLogin(user: string | UserData, visitUrl?: string): Chainable<void>;
   }
 }
