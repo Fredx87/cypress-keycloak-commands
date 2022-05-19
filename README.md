@@ -42,10 +42,13 @@ Setup the Keycloak configuration in `cypress.json` configuration file:
   "env": {
     "auth_base_url": "https://auth.server/auth",
     "auth_realm": "my_realm",
-    "auth_client_id": "my_client_id"
+    "auth_client_id": "my_client_id",
+    "auth_redirect_uri": "https://app.server/auth"
   }
 }
 ```
+
+The option `auth_redirect_uri` is optinal and defaults to the Cypress baseUrl.
 
 You can override this settings for some tests using [Enviroment variabiles](https://docs.cypress.io/guides/guides/environment-variables.html).
 
